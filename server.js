@@ -6,8 +6,8 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 
 // Dot env
-const dotenv = require('dotenv')
-dotenv.config()
+// const dotenv = require('dotenv')
+// dotenv.config()
 
 // Port
 const port = process.env.PORT || 5000
@@ -15,7 +15,7 @@ const port = process.env.PORT || 5000
 // Middlewares
 app.use(cors())
 app.use(express.json())
-app.use('/api', userRouter)
+app.use('/', userRouter)
 app.use('/', callRouter)
 
 // Mongoose Connection
